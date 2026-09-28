@@ -1,0 +1,192 @@
+{
+  "personal": {
+    "name": "Felipe Cadavid",
+    "role": "Software Engineer",
+    "focus": "Software Designer · Tech Lead",
+    "location": "Antioquia, Colombia",
+    "phone": "+57 3006115494",
+    "email": "felipe.cadavid@icloud.com",
+    "photo": "/images/felipe_photo_nobg.png",
+    "availability": "Available",
+    "profile": "Bilingual software engineer working across architecture, product, and teams. I build maintainable solutions, guide technical decisions, and turn complex problems into simple experiences.",
+    "shortProfile": "I design clear systems, support teams, and turn business needs into sustainable software.",
+    "linkedin": "https://co.linkedin.com/in/pipecad",
+    "github": "https://github.com/pipecadav",
+    "instagram": "https://www.instagram.com/pipe_cadavid_"
+  },
+  "languages": [
+    {
+      "name": "Spanish",
+      "level": "Native",
+      "percentage": 100
+    },
+    {
+      "name": "English",
+      "level": "Bilingual",
+      "percentage": 90
+    },
+    {
+      "name": "French",
+      "level": "Professional",
+      "percentage": 80
+    },
+    {
+      "name": "Portuguese",
+      "level": "Intermediate",
+      "percentage": 50
+    }
+  ],
+  "programmingLanguages": [
+    {
+      "name": "Java",
+      "percentage": 70
+    },
+    {
+      "name": "Python",
+      "percentage": 80
+    },
+    {
+      "name": "Node.js",
+      "percentage": 40
+    }
+  ],
+  "extraSkills": [
+    "Technical leadership",
+    "Software architecture",
+    "Bilingual communication",
+    "Mentoring & teaching",
+    "Systems thinking",
+    "System Design"
+  ],
+  "knowledge": [
+    {
+      "title": "Software Design",
+      "description": "Modular, maintainable solutions aligned with the product.",
+      "icon": "layers"
+    },
+    {
+      "title": "Technical Leadership",
+      "description": "Clear decisions, mentoring, and technical direction.",
+      "icon": "compass"
+    },
+    {
+      "title": "Architecture",
+      "description": "Scalable systems with clear boundaries.",
+      "icon": "architecture"
+    },
+    {
+      "title": "Backend Development",
+      "description": "Reliable services with Java, Python, and Node.js.",
+      "icon": "server"
+    },
+    {
+      "title": "Frontend Development",
+      "description": "Accessible interfaces with React and TypeScript.",
+      "icon": "code"
+    },
+    {
+      "title": "Cloud & DevOps",
+      "description": "Automation, observability, and continuous delivery.",
+      "icon": "cloud"
+    },
+    {
+      "title": "Quality Engineering",
+      "description": "Testing, code reviews, and continuous improvement.",
+      "icon": "shield"
+    },
+    {
+      "title": "Digital Products",
+      "description": "Connecting people, business, and technology.",
+      "icon": "spark"
+    },
+    {
+      "title": "Mentoring",
+      "description": "Helping others grow through shared knowledge.",
+      "icon": "people"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de Antioquia",
+      "period": "2017 — Present",
+      "title": "Systems Engineering",
+      "description": "Studies in software development, architecture, quality, databases, and information systems."
+    },
+    {
+      "institution": "Universidad de Antioquia",
+      "period": "2004 — 2009",
+      "title": "Bachelor’s Degree in Languages",
+      "description": "Studies in languages, translation, and intercultural communication. A foundation for leading and collaborating with diverse teams."
+    }
+  ],
+  "experience": [
+    {
+      "institution": "FPT Latin America",
+      "period": "2022 - Present",
+      "title": "Software Engineer / Tech Lead",
+      "description": "Designing and evolving software solutions, guiding engineering teams, and collaborating with product and business stakeholders. Oversee the technical direction, architectural design, and code quality of the development team"
+    },
+    {
+      "institution": "Globant",
+      "period": "2019 — 2022",
+      "title": "Test Automation Engineer",
+      "description": "Build software that tests other software. Bridge the gap between application development and quality assurance by writing automated tools, frameworks, and pipelines to ensure software is reliable, maintainable, and scalable."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Face Reality Skincare Ecommerce",
+      "category": "Architecture · Full Stack",
+      "description": "A modular e-commerce platform designed to grow by domain.",
+      "details": "This is a production environment for a skincare brand, with a modular architecture that allows for independent growth of each domain.",
+      "image": "/images/projects/face-reality.png",
+      "technologies": ["React", "Python", "MSSQL"],
+      "github": "https://facerealityskincare.com/"
+    },
+    {
+      "title": "DermaQ",
+      "category": "Data · Product",
+      "description": "An application that allows to collect data for analytics based on skincare products.",
+      "details": "A user friendly application that allows users to collect data for analytics based on skincare products. It provides insights and recommendations for better skincare routines.",
+      "image": "/images/projects/dermaq.png",
+      "technologies": ["React", "Python", "PBI"],
+      "github": "https://github.com/pipecadav/dermaq-frontend"
+    },
+    {
+      "title": "Disney Travel Agents",
+      "category": "SaaS · Collaboration",
+      "description": "A lightweight tool for Disney travel agents.",
+      "details": "Allows Travel Agents to manage bookings and customer interactions efficiently.",
+      "image": "/images/projects/dta.png",
+      "technologies": ["TypeScript", "Node.js", "UX"],
+      "github": "https://www.disneytravelagents.com/"
+    },
+    {
+      "title": "Virtuagym DOMO App",
+      "category": "BI · Cloud",
+      "description": "Software integration that allows to review revenue from the business.",
+      "details": "This application connects the data obtained from the finance team and turns it into beautiful dashboards that can be used for reporting.",
+      "image": "/images/projects/terra.svg",
+      "technologies": ["Node.js", "DOMO", "APIs"],
+      "github": "https://github.com/pipecadav/poc-bi"
+    },
+    {
+      "title": "PharmaQ",
+      "category": "Health · CRM",
+      "description": "Application that allows to queue attentions in a pharmacy.",
+      "details": "It allows for customers to quickly obtain information about their formulas and wait times when visiting a pharmacy.",
+      "image": "/images/projects/pharmaq.png",
+      "technologies": ["React", "Python"],
+      "github": "https://github.com/pipecadav/pharmaq-frontend"
+    },
+    {
+      "title": "Roo Reads",
+      "category": "Education · AI",
+      "description": "AI generated books for kids.",
+      "details": "Books that are filled with decodables generated with AI so that students can practice pronunciation and reading.",
+      "image": "/images/projects/rooreads.png",
+      "technologies": ["React", "Tailwind", "TensorFlow"],
+      "github": "https://roo-reads-poc.vercel.app/"
+    }
+  ]
+}

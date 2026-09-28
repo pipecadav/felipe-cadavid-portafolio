@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Felipe Cadavid Portfolio
 
-## Getting Started
+A responsive English-language resume and portfolio built with Next.js, React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Run locally
 
-```bash
+Requires Node.js 20.9 or later.
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Validation and production commands:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run lint
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design
 
-## Learn More
+The supplied reference guides the white hero, pale gray background, yellow accents (although this was changed), centered headings, rectangular cards, education rows, and social links. Inter is bundled locally through `@fontsource/inter`; no external font service is needed.
 
-To learn more about Next.js, take a look at the following resources:
+At desktop widths, the layout has a full-height skills sidebar, main content, and a social rail. At tablet widths, the skills remain beside the content and social links move below. On phones below 600px, a Profile & skills menu starts collapsed and expands on demand. The sidebar stays visible at larger widths, regardless of the mobile menu state.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CSS variables and responsive layouts are in `app/globals.css`. Components follow an atoms / molecules / organisms structure, composed by `app/page.tsx`. Content, dialogs, accessibility labels, metadata, and document language are English; institution names retain their proper names.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Component structure
 
-## Deploy on Vercel
+The diagram shows the project's components grouped by directory. Arrows point from a component to the components it renders, including those passed as children. Next.js wraps the home page with `RootLayout` from `app/layout.tsx`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```mermaid
+flowchart TD
+  subgraph app["app/"]
+    RootLayout["RootLayout (layout.tsx)"]
+    Home["Home (page.tsx)"]
+  end
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  subgraph organisms["components/organisms/"]
+    LeftSidebar
+    Hero
+    KnowledgeSection
+    TimelineSection["TimelineSection (education and experience)"]
+    PortfolioSection
+    Footer
+    RightRail
+  end
+
+  subgraph molecules["components/molecules/"]
+    ContactDialog
+    SectionHeading
+    KnowledgeCard
+    TimelineItem
+    ProjectCard
+    Modal
+  end
+
+  subgraph atoms["components/atoms/"]
+    Button
+    ContactOption
+    Icon
+    ProgressBar
+    Tag
+  end
+
+  RootLayout --> Home
+  Home --> LeftSidebar
+  Home --> Hero
+  Home --> KnowledgeSection
+  Home --> TimelineSection
+  Home --> PortfolioSection
+  Home --> Footer
+  Home --> RightRail
+
+  LeftSidebar --> Icon
+  LeftSidebar --> ProgressBar
+  Hero --> ContactDialog
+  KnowledgeSection --> SectionHeading
+  KnowledgeSection --> KnowledgeCard
+  TimelineSection --> SectionHeading
+  TimelineSection --> TimelineItem
+  PortfolioSection --> SectionHeading
+  PortfolioSection --> ProjectCard
+  PortfolioSection --> Icon
+  RightRail --> Icon
+
+  ContactDialog --> Button
+  ContactDialog --> ContactOption
+  ContactDialog --> Icon
+  ContactDialog --> Modal
+  KnowledgeCard --> Icon
+  ProjectCard --> Icon
+  ProjectCard --> Tag
+  ProjectCard --> Modal
+  Modal --> Icon
+  ContactOption --> Icon
+```
+
+`ContactDialog` renders two `ContactOption` instances: LinkedIn and email. Shared components appear once in the diagram even when several parents use them. Framework components such as Next.js `Image` and native HTML elements are omitted.
+
+## Verification
+
+Run lint and a production build. In the browser, check desktop, tablet, and phone widths; visible language and programming progress bars; local Inter font loading; contact and project dialogs; portfolio scrolling; and absence of page-wide horizontal overflow.
